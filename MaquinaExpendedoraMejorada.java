@@ -93,6 +93,7 @@ public class MaquinaExpendedoraMejorada {
         int vaciarDinero = 0;
             if (balanceClienteActual <= 0){
                 vaciarDinero = totalDineroAcumulado;
+                vaciarDinero = 0;
             }
             else{
                 System.out.println("Operacion en curso");
