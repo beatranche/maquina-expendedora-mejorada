@@ -85,16 +85,18 @@ public class MaquinaExpendedoraMejorada {
                 balanceClienteActual = balanceClienteActual - precioBillete;
                 numeroBilletesVendidos ++;
                 if (maquinaPremio == true){
-                    double descuento = 0;
-                    descuento = (0.10 * precioBillete);
-                    System.out.println("Tiene un descuento de " + descuento + " en compras");
-                    
-                }
+                    if ((numeroBilletesVendidos % 3) == 0){
+                        double descuento = 0;
+                        descuento = (0.10 * precioBillete);
+                        System.out.println("Tiene un descuento de " + descuento + " en compras");
+                    }
+                 }
+                
             }
             else {
             System.out.println("Necesitas introducir " + cantidadDeDineroQueFalta + " euros mas!");
-            }
-        }
+            }    
+         }
         else{
             System.out.println("Se han vendido todos los billetes");
         }
